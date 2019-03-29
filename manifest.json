@@ -1,0 +1,56 @@
+{
+    "manifest_version": 2,
+    "name": "Jd-extension",
+    "version": "1.0.0",
+    "description": "a tool for JD-sellers to manage their online orders.",
+    "homepage_url": "https://github.com/Lexy-One77/browser-extentsion",
+    "default_locale": "en",
+    "icons": {
+        "48": "icons/48.png",
+        "96": "icons/96.png"
+    },
+    "permissions": [
+        "*://*.baidu.com/*",
+        "tabs"
+    ],
+    "background": {
+        "scripts": [
+            "lib/axios.min.js",
+            "lib/co.js",
+            "lib/jquery.min.js",
+            "background/background.js"
+        ],
+        "persistent": true
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://.baidu.com/*"
+            ],
+            "js": [
+                "content_scripts/index.js"
+            ]
+        },
+        {
+            "matches": [
+                "*://porder.shop.jd.com/*"
+            ],
+            "js": [
+                "content_scripts/modify_request.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        "lib/xmlhttp.js"
+    ],
+    "browser_action": {
+        "browser_style": true,
+        "default_title": "京东魔盒插件",
+        "default_popup": "popup/home.html",
+        "default_icon": {
+            "19": "icons/19.png",
+            "32": "icons/32.png",
+            "38": "icons/38.png"
+        }
+    }
+}
