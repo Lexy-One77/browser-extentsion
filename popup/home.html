@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="home.css"/>
+    <script src="../lib/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="plug_wrap hidden" id="content">
+    <div class="plug_alert">
+        <div class="alertText"></div>
+    </div>
+    <div class="plug_header">
+        <img class="logo" src="http://jdmohe.ufile.ucloud.com.cn/plug/plug.png"/>
+        京东插件<span class="red hidden loginText"> 已登录</span><a id="logout" href="javascript:;" style="font-size: 12px;color: #999;margin-left: 10px;">退出登录</a>
+    </div>
+    <div class="plug_ul_wrap">
+        <ul class="plug_ul">
+            <!-- 这里显示最新互动数据 -->
+        </ul>
+    </div>
+    <div class="content_inner">
+        <div class="login_wrap hidden bottom_wrap">
+            <input type="text" class="form-control" id="account" placeholder="请输入京东插件账号">
+            <input type="password" class="form-control" id="pwd" placeholder="请输入京东插件密码">
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" checked id="remember"> 记住密码
+                </label>
+                <a href="http://jdmohe.com" target="_blank">还没注册？</a>
+            </div>
+            <button type="button" id="submit">立即登录</button>
+            <div class="tips">请输入京东插件的账号和密码，该京东插件需升级会员及绑定店铺即可使用</div>
+        </div>
+        <div class="bind_wrap hidden bottom_wrap">
+            <div class="text_tips">该京东插件需升级会员及绑定店铺即可使用</div>
+            <a href="http://jdmohe.com/member-center/shop" target="_blank">去绑定店铺</a>
+        </div>
+        <div class="success_wrap hidden bottom_wrap">
+            <div class="hidden">
+            <div class="top_text">
+                页面刷新时间每30秒系统自动更新一次，如有需要可点击 “手动刷新”按钮
+            </div>
+            <div class="bottom_text">
+                注：页面刷新时间设置可以帮助商家实时监测有不良行为买家的账 号，为商家减少不必要的损失。如果选择不设置时间，商家可以根 据自己的时间需要点击手动刷新按钮即可
+            </div>
+            <input type="button" id="update" value="手动刷新">
+            </div>
+            <ul class="suc_ul">
+                <li>
+                    <div class="suc_hea">监控标记可疑买家<a href="http://jdmohe.com" target="_blank">使用教程 ></a></div>
+                    <p>与百万商家共享可疑大数据，及时标记可疑买家，为商家减少不必 要的损失</p>
+                </li>
+                <li>
+                    <div class="suc_hea">上传店铺刷单黑号<a href="http://jdmohe.com" target="_blank">使用教程 ></a></div>
+                    <p>刷单后为防相关账号不安全导致后续出现虚假交易，及时标记可疑 刷单黑号，避免之后产生违规订单</p>
+                </li>
+                <li>
+                    <div class="suc_hea">平台认证刷单黑号<a href="http://jdmohe.com" target="_blank">使用教程 ></a></div>
+                    <p>当你的订单被判定为虚假交易后，通过插件批量标记刷单黑号，不 仅能获得积分奖励，还能防止二次入坑</p>
+                </li>
+                <li>
+                    <div class="suc_hea">批量备注与导出可疑订单<a href="http://jdmohe.com" target="_blank">使用教程 ></a></div>
+                    <p>通过批量备注可疑订单，可以大大减少人工操作，提高工作效率。 导出已备注的可疑订单，能让管理更清晰</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="error-content">
+    <img src="../icons/bac.png" width="100%"/>
+    <p>请打开<b></br>【京东商家后台】</br>【订单管理】</br>【新订单查询与跟踪】</br></b>页面进行操作</p>
+</div>
+<div class="jdmhLoading">
+    <svg width="50" height="50" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg"> <defs> <linearGradient x1="8.042%" y1="0%" x2="65.682%" y2="23.865%" id="a"> <stop stop-color="#f33" stop-opacity="0" offset="0%"></stop> <stop stop-color="#f33" stop-opacity=".631" offset="63.146%"></stop> <stop stop-color="#f33" offset="100%"></stop> </linearGradient> </defs> <g fill="none" fill-rule="evenodd"> <g transform="translate(1 1)"> <path d="M36 18c0-9.94-8.06-18-18-18" id="Oval-2" stroke="url(#a)" stroke-width="2" transform="rotate(166.654 18 18)"> <animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="0.9s" repeatCount="indefinite"></animateTransform> </path> <circle fill="#f33" cx="36" cy="18" r="1" transform="rotate(166.654 18 18)"> <animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="0.9s" repeatCount="indefinite"></animateTransform> </circle> </g> </g></svg>
+</div>
+<script src="home.js"></script>
+</body>
+
+</html>
